@@ -5,13 +5,14 @@ today=$(date +%d-%m-%y)
 echo "choose your number: "
 echo "btw choose wisely :)"
 echo "where E-> /etc, L-> /lib, R-> /root, B-> /bin, H-> /home: "
-read -p NUM
-if [ NUM == E ]:
+if [ $1 == E ]:
 	ls /etc > log.$today
-elif [NUM == L ]:
+elif [$1 == L ]:
 	ls /etc > log.$today
-elif [NUM == B ]:
+elif [$1 == B ]:
 	ls /bin > log.$today
-elif [NUM == H ]:
+elif [$1 == H ]:
 	ls /home > log.$today
+else 
+	echo "directory doesn't exist!"
 fi

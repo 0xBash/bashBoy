@@ -16,3 +16,6 @@ elif [$1 == H ]:
 else 
 	echo "directory doesn't exist!"
 fi
+#you_can_edit_more
+#exit status
+echo $?
